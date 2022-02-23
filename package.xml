@@ -11,7 +11,6 @@
 	<buildtool_depend>catkin</buildtool_depend>
 	<depend>eigen</depend>
 	<depend>kdl_parser</depend>
-	<depend>orocos_kdl</depend>
+	<depend>liborocos-kdl-dev</depend>
 	<depend>sensor_msgs</depend>
-	<test_depend>dr_eigen</test_depend>
 </package>

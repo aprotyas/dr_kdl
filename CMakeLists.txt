@@ -38,16 +38,6 @@ target_link_libraries(${PROJECT_NAME}
 	${orocos_kdl_LIBRARIES}
 )
 
-if (CATKIN_ENABLE_TESTING)
-	find_package(dr_eigen REQUIRED)
-	include_directories(SYSTEM ${dr_eigen_INCLUDE_DIRS})
-
-	catkin_add_gtest(${PROJECT_NAME}_test_kdl   test/kdl.cpp)
-	catkin_add_gtest(${PROJECT_NAME}_test_eigen test/eigen.cpp)
-	target_link_libraries(${PROJECT_NAME}_test_kdl   ${PROJECT_NAME} ${catkin_LIBRARIES} ${dr_eigen_LIBRARIES})
-	target_link_libraries(${PROJECT_NAME}_test_eigen ${PROJECT_NAME} ${catkin_LIBRARIES} ${dr_eigen_LIBRARIES})
-endif()
-
 install(
 	TARGETS "${PROJECT_NAME}"
 	ARCHIVE DESTINATION "${CATKIN_PACKAGE_LIB_DESTINATION}"
